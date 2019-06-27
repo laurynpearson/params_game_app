@@ -28,7 +28,17 @@ class Api::GamesController < ApplicationController
   end
 
   def body_parameter
-    @name = params[:name]
+    user_guess = params[:guess].to_i
+    if user_guess == 20
+      p "You Win!"
+      @response = "You win!"
+    elsif user_guess > 20
+      p "Too high!"
+      @response = "Too high!"
+    else user_guess < 20
+      p "Too low!"
+      @response = "Too low!"
     render 'body_parameter.json.jb'
+    end
   end
 end

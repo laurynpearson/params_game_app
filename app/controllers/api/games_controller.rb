@@ -26,4 +26,8 @@ class Api::GamesController < ApplicationController
     end
     render 'guess_number.json.jb'
   end
+
+  def body_parameter
+    render 'body_parameter.json.jb'
+  end
 end

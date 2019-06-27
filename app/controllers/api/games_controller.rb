@@ -28,6 +28,7 @@ class Api::GamesController < ApplicationController
   end
 
   def body_parameter
+    @name = params[:name]
     render 'body_parameter.json.jb'
   end
 end

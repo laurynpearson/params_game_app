@@ -13,32 +13,17 @@ class Api::GamesController < ApplicationController
   end
 
   def guess_number
-    guess = params["user_guess"].to_i
-    if guess == 20
+    user_guess = params["guess"].to_i
+    if user_guess == 20
       p "You Win!"
       @response = "You win!"
-    elsif guess > 20
+    elsif user_guess > 20
       p "Too high!"
       @response = "Too high!"
-    else guess < 20
+    else user_guess < 20
       p "Too low!"
       @response = "Too low!"
     end
     render 'guess_number.json.jb'
-  end
-
-  def url_segment_method
-    user_input = params["guess"].to_i
-    if user_input == 40
-      p "You win!"
-      @note = "You win!"
-    elsif user_input > 40
-      p "Too high!"
-      @note = "Too high!"
-    else user_input < 40
-      p "Too low!"
-      @note = "Too low!"
-    end
-    render 'segment_view.json.jb'
   end
 end

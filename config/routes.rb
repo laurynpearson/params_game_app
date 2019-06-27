@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     get "/number_game" => "games#guess_number"
 
     #segment parameter
-    get "/segment_parameter_url/:guess" =>  'games#url_segment_method'
+    get "/number_game/:guess" =>  'games#guess_number'
   #   get "/photos" => "photos#index"
   end
 end

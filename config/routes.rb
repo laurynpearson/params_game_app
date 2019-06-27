@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
     #body parameter
     post "/body_parameter_url" => 'games#body_parameter'
+    post "/username_password" => 'games#username_password'
 
   #   get "/photos" => "photos#index"
   end

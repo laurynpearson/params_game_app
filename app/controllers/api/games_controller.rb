@@ -41,4 +41,7 @@ class Api::GamesController < ApplicationController
     render 'body_parameter.json.jb'
     end
   end
+  def username_password
+    render 'body_parameter.json.jb'
+  end
 end
